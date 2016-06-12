@@ -84,15 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Reby">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="2016 年 6 月 上海Shortest PrefixesDescriptionA prefix of a string is a substring starting at the beginning of the given string. The prefixes of “carbon” are: “c”, “ca”, “car”, “carb”, “carbo”, and “carbon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最短前缀">
+<meta property="og:url" content="http://yoursite.com/2016/06/12/2016-06-10-前缀/index.html">
 <meta property="og:site_name" content="Reby">
-<meta property="og:description">
+<meta property="og:description" content="2016 年 6 月 上海Shortest PrefixesDescriptionA prefix of a string is a substring starting at the beginning of the given string. The prefixes of “carbon” are: “c”, “ca”, “car”, “carb”, “carbo”, and “carbon">
+<meta property="og:updated_time" content="2016-06-12T04:47:14.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Reby">
-<meta name="twitter:description">
+<meta name="twitter:title" content="最短前缀">
+<meta name="twitter:description" content="2016 年 6 月 上海Shortest PrefixesDescriptionA prefix of a string is a substring starting at the beginning of the given string. The prefixes of “carbon” are: “c”, “ca”, “car”, “carb”, “carbo”, and “carbon">
 
 
 
@@ -113,9 +114,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/12/2016-06-10-前缀/"/>
 
-  <title> Reby </title>
+  <title> 最短前缀 | Reby </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -215,9 +214,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -237,10 +236,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/12/2016-06-10-前缀/" itemprop="url">
-                  最短前缀
-                </a>
+                最短前缀
               
             
           </h1>
@@ -299,9 +295,7 @@
       
 
       
-        
-          
-            <h3 id="2016-年-6-月-上海"><a href="#2016-年-6-月-上海" class="headerlink" title="2016 年 6 月 上海"></a>2016 年 6 月 上海</h3><h2 id="Shortest-Prefixes"><a href="#Shortest-Prefixes" class="headerlink" title="Shortest Prefixes"></a>Shortest Prefixes</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>A prefix of a string is a substring starting at the beginning of the given string. The prefixes of “carbon” are: “c”, “ca”, “car”, “carb”, “carbo”, and “carbon”. Note that the empty string is not considered a prefix in this problem, but every non-empty string is considered to be a prefix of itself. In everyday language, we tend to abbreviate words by prefixes. For example, “carbohydrate” is commonly abbreviated by “carb”. In this problem, given a set of words, you will find for each word the shortest prefix that uniquely identifies the word it represents. </p>
+        <h3 id="2016-年-6-月-上海"><a href="#2016-年-6-月-上海" class="headerlink" title="2016 年 6 月 上海"></a>2016 年 6 月 上海</h3><h2 id="Shortest-Prefixes"><a href="#Shortest-Prefixes" class="headerlink" title="Shortest Prefixes"></a>Shortest Prefixes</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>A prefix of a string is a substring starting at the beginning of the given string. The prefixes of “carbon” are: “c”, “ca”, “car”, “carb”, “carbo”, and “carbon”. Note that the empty string is not considered a prefix in this problem, but every non-empty string is considered to be a prefix of itself. In everyday language, we tend to abbreviate words by prefixes. For example, “carbohydrate” is commonly abbreviated by “carb”. In this problem, given a set of words, you will find for each word the shortest prefix that uniquely identifies the word it represents. </p>
 <p>In the sample input below, “carbohydrate” can be abbreviated to “carboh”, but it cannot be abbreviated to “carbo” (or anything shorter) because there are other words in the list that begin with “carbo”. </p>
 <p>An exact match will override a prefix match. For example, the prefix “car” matches the given word “car” exactly. Therefore, it is understood without ambiguity that “car” is an abbreviation for “car” , not for “carriage” or any of the other words in the list that begins with “car”.</p>
 <h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>The input contains at least two, but no more than 1000 lines. Each line contains one word consisting of 1 to 20 lower case letters.</p>
@@ -312,16 +306,19 @@
 <p>题意：为每个单词造一个缩写，不能两个单词具有相同的缩写，要尽量短</p>
 <h2 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">struct</span> trie</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> count;</span><br><span class="line">	<span class="keyword">bool</span> isWord;</span><br><span class="line">	trie* next[<span class="number">26</span>];</span><br><span class="line">	trie()  <span class="comment">//初始化</span></span><br><span class="line">	&#123;</span><br><span class="line">		count = <span class="number">0</span>;</span><br><span class="line">		isWord = <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;<span class="number">26</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			next[i] = <span class="literal">NULL</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;root;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">char</span>* str)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	trie*p = &amp;root;</span><br><span class="line">	<span class="keyword">while</span> (*str)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> id = *str - <span class="string">'a'</span>;</span><br><span class="line">		<span class="keyword">if</span> (p-&gt;next[id] == <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			p-&gt;next[id] = <span class="keyword">new</span> trie();</span><br><span class="line">		&#125;</span><br><span class="line">		p-&gt;next[id]-&gt;count++;  <span class="comment">//对每个遍历到的或新建的节点，重复次数加1</span></span><br><span class="line">		p = p-&gt;next[id];</span><br><span class="line">		str++;</span><br><span class="line">	&#125;</span><br><span class="line">	p-&gt;isWord = <span class="literal">true</span>; <span class="comment">//遍历结束后，标记以此为结尾的是一个单词</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">search</span><span class="params">(<span class="keyword">char</span>* str)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	trie*p = &amp;root;</span><br><span class="line">	<span class="built_in">string</span> s = <span class="string">""</span>;</span><br><span class="line">	<span class="keyword">while</span> (*str)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> id = *str - <span class="string">'a'</span>;</span><br><span class="line"></span><br><span class="line">		s+=*str; <span class="comment">//添加输出的字符</span></span><br><span class="line">		<span class="keyword">if</span> (p-&gt;next[id]-&gt;count&gt;<span class="number">1</span>) <span class="comment">//如果count&gt;1，则表明这是大家共同的节点，不能以此为结尾构造前缀==</span></span><br><span class="line">		&#123;</span><br><span class="line">			p = p-&gt;next[id];</span><br><span class="line">			str++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="comment">//如果count=1，则表明没有其他的单词以此为结尾了，可以作为前缀</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> s;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (p-&gt;isWord)<span class="comment">//如果直到遍历结束，还没找到前缀，则以此单词作为前缀</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> input[<span class="number">1005</span>][<span class="number">25</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> nCount = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (gets(input[nCount])) <span class="comment">//此处是学的别人的输入方法，在一边输入，一边记录字符串个数</span></span><br><span class="line">	&#123;</span><br><span class="line">		insert(input[nCount]);</span><br><span class="line">		nCount++;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;nCount; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">string</span> str = search(input[i]);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; input[i] &lt;&lt; <span class="string">" "</span> &lt;&lt; str &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//string输出，最好用cout，简单</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -329,140 +326,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/12/hello-world/" rel="next" title="test">
+                <i class="fa fa-chevron-left"></i> test
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/06/12/hello-world/" itemprop="url">
-                  test
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T00:00:00+08:00" content="2016-06-12">
-              2016-06-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/T1/" itemprop="url" rel="index">
-                    <span itemprop="name">T1</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -470,6 +359,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -489,8 +382,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -533,6 +435,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2016-年-6-月-上海"><span class="nav-number">1.</span> <span class="nav-text">2016 年 6 月 上海</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shortest-Prefixes"><span class="nav-number"></span> <span class="nav-text">Shortest Prefixes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Description"><span class="nav-number"></span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number"></span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number"></span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-input"><span class="nav-number"></span> <span class="nav-text">Sample input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-out"><span class="nav-number"></span> <span class="nav-text">Sample out</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Source-Code"><span class="nav-number"></span> <span class="nav-text">Source Code</span></a></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -636,6 +549,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
