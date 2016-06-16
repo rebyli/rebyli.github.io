@@ -1,0 +1,645 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="并查集," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="&amp;#x5E76;&amp;#x67E5;&amp;#x96C6;12345int findRoot(int x){	if(tree[x]==-1) return x;	else return findRoot(tree[x]);}
+&amp;#x975E;&amp;#x9012;&amp;#x5F52;&amp;#x7248;&amp;#x672C;123456789int findRoot(int x){	while(tree[x]!=-1)	{">
+<meta property="og:type" content="article">
+<meta property="og:title" content="并查集">
+<meta property="og:url" content="http://yoursite.com/2016/06/16/并查集/index.html">
+<meta property="og:site_name" content="Reby">
+<meta property="og:description" content="&amp;#x5E76;&amp;#x67E5;&amp;#x96C6;12345int findRoot(int x){	if(tree[x]==-1) return x;	else return findRoot(tree[x]);}
+&amp;#x975E;&amp;#x9012;&amp;#x5F52;&amp;#x7248;&amp;#x672C;123456789int findRoot(int x){	while(tree[x]!=-1)	{">
+<meta property="og:image" content="http://yoursite.com/2016/06/16/并查集/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/06/16/并查集/2.jpg">
+<meta property="og:updated_time" content="2016-06-16T11:39:28.503Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="并查集">
+<meta name="twitter:description" content="&amp;#x5E76;&amp;#x67E5;&amp;#x96C6;12345int findRoot(int x){	if(tree[x]==-1) return x;	else return findRoot(tree[x]);}
+&amp;#x975E;&amp;#x9012;&amp;#x5F52;&amp;#x7248;&amp;#x672C;123456789int findRoot(int x){	while(tree[x]!=-1)	{">
+<meta name="twitter:image" content="http://yoursite.com/2016/06/16/并查集/1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/06/16/并查集/"/>
+
+  <title> 并查集 | Reby </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Reby</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                并查集
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-16T19:15:56+08:00" content="2016-06-16">
+              2016-06-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/16/并查集/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/并查集/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="&#x5E76;&#x67E5;&#x96C6;"><a href="#&#x5E76;&#x67E5;&#x96C6;" class="headerlink" title="&#x5E76;&#x67E5;&#x96C6;"></a>&#x5E76;&#x67E5;&#x96C6;</h1><p><img src="/2016/06/16/&#x5E76;&#x67E5;&#x96C6;/1.jpg" alt="1"><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findRoot</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>{</span><br><span class="line">	<span class="keyword">if</span>(tree[x]==<span class="number">-1</span>) <span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> findRoot(tree[x]);</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>&#x975E;&#x9012;&#x5F52;&#x7248;&#x672C;<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findRoot</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>{</span><br><span class="line">	<span class="keyword">while</span>(tree[x]!=<span class="number">-1</span>)</span><br><span class="line">	{</span><br><span class="line">		x=tree[x];</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">int</span> root=x;</span><br><span class="line">	<span class="keyword">return</span> root;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h2 id="&#x8DEF;&#x5F84;&#x538B;&#x7F29;"><a href="#&#x8DEF;&#x5F84;&#x538B;&#x7F29;" class="headerlink" title="&#x8DEF;&#x5F84;&#x538B;&#x7F29;"></a>&#x8DEF;&#x5F84;&#x538B;&#x7F29;</h2><p><img src="/2016/06/16/&#x5E76;&#x67E5;&#x96C6;/2.jpg" alt="2"><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findRoot</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>{</span><br><span class="line">	<span class="keyword">if</span>(next[i]==<span class="number">-1</span>) <span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">int</span> temp=findRoot(tree[x]);</span><br><span class="line">		tree[x]=temp;</span><br><span class="line">		<span class="keyword">return</span> temp;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>&#x975E;&#x9012;&#x5F52;&#x7248;&#x672C;<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findRoot</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>{</span><br><span class="line">	<span class="keyword">int</span> temp=x; <span class="comment">//&#x6682;&#x5B58;x</span></span><br><span class="line">	<span class="keyword">while</span>(tree[x]!=<span class="number">-1</span>)<span class="comment">// &#x7B2C;&#x4E00;&#x6B65;&#x627E;&#x51FA;root</span></span><br><span class="line">	{</span><br><span class="line">		x=tree[x];</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">int</span> root=x;</span><br><span class="line">	x=temp;</span><br><span class="line">	<span class="keyword">while</span>(tree[x]!=<span class="number">-1</span>)<span class="comment">//&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;&#x4ECE;x&#x5230;root&#x8DEF;&#x5F84;&#x4E0A;&#x6240;&#x6709;&#x7684;&#x70B9;&#x90FD;&#x6307;&#x5411;root</span></span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">int</span> t=tree[x];<span class="comment">//&#x6682;&#x5B58;x&#x7684;father</span></span><br><span class="line">		tree[x]=root;</span><br><span class="line">		x=t;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> root;</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h1 id="&#x4F8B;&#x5B50;&#xFF1A;&#x7545;&#x901A;&#x5DE5;&#x7A0B;"><a href="#&#x4F8B;&#x5B50;&#xFF1A;&#x7545;&#x901A;&#x5DE5;&#x7A0B;" class="headerlink" title="&#x4F8B;&#x5B50;&#xFF1A;&#x7545;&#x901A;&#x5DE5;&#x7A0B;"></a>&#x4F8B;&#x5B50;&#xFF1A;&#x7545;&#x901A;&#x5DE5;&#x7A0B;</h1><h2 id="&#x63CF;&#x8FF0;"><a href="#&#x63CF;&#x8FF0;" class="headerlink" title="&#x63CF;&#x8FF0;"></a>&#x63CF;&#x8FF0;</h2><p>&#x67D0;&#x7701;&#x8C03;&#x67E5;&#x57CE;&#x9547;&#x4EA4;&#x901A;&#x72B6;&#x51B5;&#xFF0C;&#x5F97;&#x5230;&#x73B0;&#x6709;&#x57CE;&#x9547;&#x9053;&#x8DEF;&#x7EDF;&#x8BA1;&#x8868;&#xFF0C;&#x8868;&#x4E2D;&#x5217;&#x51FA;&#x4E86;&#x6BCF;&#x6761;&#x9053;&#x8DEF;&#x76F4;&#x63A5;&#x8FDE;&#x901A;&#x7684;&#x57CE;&#x9547;&#x3002;<br>&#x7701;&#x653F;&#x5E9C;&#x201C;&#x7545;&#x901A;&#x5DE5;&#x7A0B;&#x201D;&#x7684;&#x76EE;&#x6807;&#x662F;&#x4F7F;&#x5168;&#x7701;&#x4EFB;&#x4F55;&#x4E24;&#x4E2A;&#x57CE;&#x9547;&#x95F4;&#x90FD;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4EA4;&#x901A;&#xFF08;&#x4F46;&#x4E0D;&#x4E00;&#x5B9A;&#x6709;&#x76F4;&#x63A5;&#x7684;&#x9053;&#x8DEF;&#x76F8;&#x8FDE;&#xFF0C;<br>&#x53EA;&#x8981;&#x4E92;&#x76F8;&#x95F4;&#x63A5;&#x901A;&#x8FC7;&#x9053;&#x8DEF;&#x53EF;&#x8FBE;&#x5373;&#x53EF;&#xFF09;&#x3002;&#x95EE;&#x6700;&#x5C11;&#x8FD8;&#x9700;&#x8981;&#x5EFA;&#x8BBE;&#x591A;&#x5C11;&#x6761;&#x9053;&#x8DEF;&#xFF1F;</p>
+<h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><p>&#x6D4B;&#x8BD5;&#x8F93;&#x5165;&#x5305;&#x542B;&#x82E5;&#x5E72;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x3002;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x7684;&#x7B2C;1&#x884C;&#x7ED9;&#x51FA;&#x4E24;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x57CE;&#x9547;&#x6570;&#x76EE;N ( &lt; 1000 )&#x548C;&#x9053;&#x8DEF;&#x6570;&#x76EE;M&#xFF1B;&#x968F;&#x540E;&#x7684;M&#x884C;&#x5BF9;&#x5E94;M&#x6761;&#x9053;&#x8DEF;&#xFF0C;&#x6BCF;&#x884C;&#x7ED9;&#x51FA;&#x4E00;&#x5BF9;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x8BE5;&#x6761;&#x9053;&#x8DEF;&#x76F4;&#x63A5;&#x8FDE;&#x901A;&#x7684;&#x4E24;&#x4E2A;&#x57CE;&#x9547;&#x7684;&#x7F16;&#x53F7;&#x3002;&#x4E3A;&#x7B80;&#x5355;&#x8D77;&#x89C1;&#xFF0C;&#x57CE;&#x9547;&#x4ECE;1&#x5230;N&#x7F16;&#x53F7;&#x3002;<br>&#x6CE8;&#x610F;:&#x4E24;&#x4E2A;&#x57CE;&#x5E02;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x6761;&#x9053;&#x8DEF;&#x76F8;&#x901A;,&#x4E5F;&#x5C31;&#x662F;&#x8BF4;<br>3 3<br>1 2<br>1 2<br>2 1<br>&#x8FD9;&#x79CD;&#x8F93;&#x5165;&#x4E5F;&#x662F;&#x5408;&#x6CD5;&#x7684;<br>&#x5F53;N&#x4E3A;0&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x7ED3;&#x675F;&#xFF0C;&#x8BE5;&#x7528;&#x4F8B;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="output"><a href="#output" class="headerlink" title="output"></a>output</h2><p>&#x5BF9;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF0C;&#x5728;1&#x884C;&#x91CC;&#x8F93;&#x51FA;&#x6700;&#x5C11;&#x8FD8;&#x9700;&#x8981;&#x5EFA;&#x8BBE;&#x7684;&#x9053;&#x8DEF;&#x6570;&#x76EE;&#x3002;</p>
+<h2 id="sample-input"><a href="#sample-input" class="headerlink" title="sample input"></a>sample input</h2><p>4 2<br>1 3<br>4 3<br>3 3<br>1 2<br>1 3<br>2 3<br>5 2<br>1 2<br>3 5<br>999 0<br>0   </p>
+<h2 id="sample-output"><a href="#sample-output" class="headerlink" title="sample output"></a>sample output</h2><p>1<br>0<br>2<br>998</p>
+<p>&#x676D;&#x7535;1232&#x9898;</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> tree[<span class="number">1000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*int findRoot(int x)</span><br><span class="line">{</span><br><span class="line">	if(tree[x]==-1) return x;</span><br><span class="line">	else</span><br><span class="line">	{</span><br><span class="line">		int temp=findRoot(tree[x]);</span><br><span class="line">		tree[x]=temp;</span><br><span class="line">		return temp;</span><br><span class="line">	}</span><br><span class="line">}*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">findRoot</span><span class="params">(<span class="keyword">int</span> x)</span></span><br><span class="line"></span>{</span><br><span class="line">	<span class="keyword">int</span> temp=x;</span><br><span class="line">	<span class="keyword">while</span>(tree[x]!=<span class="number">-1</span>)</span><br><span class="line">	{</span><br><span class="line">		x=tree[x];</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">int</span> root=x;</span><br><span class="line">	x=temp;</span><br><span class="line">	<span class="keyword">while</span>(tree[x]!=<span class="number">-1</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">int</span> t=tree[x];</span><br><span class="line">		tree[x]=root;</span><br><span class="line">		x=t;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> root;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>{</span><br><span class="line">	<span class="keyword">int</span> N,M;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;N)!=EOF&amp;&amp;N!=<span class="number">0</span>)</span><br><span class="line">	{</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;M);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">		{</span><br><span class="line">			tree[i]=<span class="number">-1</span>;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=M;i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">int</span> a,b;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">			<span class="keyword">int</span> aRoot=findRoot(a);</span><br><span class="line">			<span class="keyword">int</span> bRoot=findRoot(b);</span><br><span class="line">			<span class="keyword">if</span>(aRoot!=bRoot)</span><br><span class="line">			{</span><br><span class="line">				tree[aRoot]=bRoot;</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">if</span>(tree[i]==<span class="number">-1</span>)</span><br><span class="line">			{</span><br><span class="line">				count++;</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,count<span class="number">-1</span>);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/并查集/" rel="tag">#并查集</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/16/最长回文子串/" rel="next" title="最长回文子串">
+                <i class="fa fa-chevron-left"></i> 最长回文子串
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/16/并查集/"
+           data-title="并查集" data-url="http://yoursite.com/2016/06/16/并查集/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/1.png"
+               alt="Rui" />
+          <p class="site-author-name" itemprop="name">Rui</p>
+          <p class="site-description motion-element" itemprop="description">Never stand still</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#并查集"><span class="nav-number">1.</span> <span class="nav-text">并查集</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#路径压缩"><span class="nav-number">1.1.</span> <span class="nav-text">路径压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例子：畅通工程"><span class="nav-number">2.</span> <span class="nav-text">例子：畅通工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#描述"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#input"><span class="nav-number">2.2.</span> <span class="nav-text">input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#output"><span class="nav-number">2.3.</span> <span class="nav-text">output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sample-input"><span class="nav-number">2.4.</span> <span class="nav-text">sample input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sample-output"><span class="nav-number">2.5.</span> <span class="nav-text">sample output</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rui</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"rebyli"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
