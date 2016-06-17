@@ -1,0 +1,99 @@
+<hr>
+<p>title: 最小生成树<br>categories: Algorithm<br>tags: </p>
+<pre><code>- 最小生成树
+</code></pre><hr>
+<h1 id="最小生成树的Kruskal算法原理"><a href="#最小生成树的Kruskal算法原理" class="headerlink" title="最小生成树的Kruskal算法原理"></a>最小生成树的Kruskal算法原理</h1><ul>
+<li>初始阶段所有节点都是孤立的集合</li>
+<li>按照<strong>边</strong>的权重进行排序，再进行遍历，如果某条边的两个顶点分属不同的集合，则该边为最小生成树的一条边，并将这两个顶点分属的集合合并。</li>
+<li>遍历完所有的边后，原图上所有的节点属于同一集合；否则原图不连通，最小生成树不存在。</li>
+</ul>
+<pre><code class="C++"><span class="keyword">struct</span> edge
+{
+    <span class="keyword">int</span> a,b;
+    <span class="keyword">int</span> cost;
+    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> edge &amp;A) <span class="keyword">const</span>
+    {
+        <span class="keyword">return</span> cost&lt;A.cost;
+    }
+}
+
+<span class="function"><span class="keyword">int</span> <span class="title">result</span><span class="params">(edge e,<span class="keyword">int</span> n)</span>
+</span>{
+    <span class="keyword">int</span>* tree=<span class="keyword">new</span> <span class="keyword">int</span>(n);
+    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)
+    {
+        tree[i]=<span class="number">-1</span>;
+    }
+    sort(edge,edge+n);
+    <span class="keyword">int</span> ans=<span class="number">0</span>;
+    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)
+    {
+        <span class="keyword">int</span> aRoot=findRoot(edge[i].a);
+        <span class="keyword">int</span> bRoot=findRoot(edge[i].b);
+        <span class="keyword">if</span>(a!=b)
+        {
+            tree[a]=b;
+            ans+=edge[i].cost;
+        }
+    }
+    <span class="keyword">return</span> ans;
+}
+</code></pre>
+<h1 id="例子：畅通工程"><a href="#例子：畅通工程" class="headerlink" title="例子：畅通工程"></a>例子：畅通工程</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>某省调查乡村交通状况，得到的统计表中列出了任意两村庄间的距离。省政府“畅通工程”的目标是使全省任何两个村庄间都可以实现公路交通（但不一定有直接的公路相连，只要能间接通过公路可达即可），并要求铺设的公路总长度为最小。请计算最小的公路总长度。</p>
+<h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><p>测试输入包含若干测试用例。每个测试用例的第1行给出村庄数目N ( &lt; 100 )；随后的N(N-1)/2行对应村庄间的距离，每行给出一对正整数，分别是两个村庄的编号，以及此两村庄间的距离。为简单起见，村庄从1到N编号。<br>当N为0时，输入结束，该用例不被处理。</p>
+<h2 id="output"><a href="#output" class="headerlink" title="output"></a>output</h2><p>对每个测试用例，在1行里输出最小的公路总长度。</p>
+<h2 id="sample-input"><a href="#sample-input" class="headerlink" title="sample input"></a>sample input</h2><p>3<br>1 2 1<br>1 3 2<br>2 3 4<br>4<br>1 2 1<br>1 3 4<br>1 4 1<br>2 3 3<br>2 4 2<br>3 4 5<br>0</p>
+<h2 id="sample-output"><a href="#sample-output" class="headerlink" title="sample output"></a>sample output</h2><p>3<br>5</p>
+<p>杭电1233题</p>
+<pre><code class="C++"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span>
+<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
+<span class="keyword">struct</span> edge
+{
+    <span class="keyword">int</span> a,b;
+    <span class="keyword">int</span> cost;
+    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> edge &amp;A) <span class="keyword">const</span>
+    {
+        <span class="keyword">return</span> cost&lt;A.cost;
+    }
+}e[<span class="number">5000</span>];
+<span class="keyword">int</span> tree[<span class="number">105</span>];
+<span class="function"><span class="keyword">int</span> <span class="title">findRoot</span><span class="params">(<span class="keyword">int</span> x)</span>
+</span>{
+    <span class="keyword">if</span>(tree[x]==<span class="number">-1</span>) <span class="keyword">return</span> x;
+    <span class="keyword">else</span>
+    {
+        <span class="keyword">int</span> temp=findRoot(tree[x]);
+        tree[x]=temp;
+        <span class="keyword">return</span> temp;
+    }
+}
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
+</span>{
+    <span class="keyword">int</span> N;
+    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;N)!=EOF)
+    {
+        <span class="keyword">int</span> m=N*(N<span class="number">-1</span>)/<span class="number">2</span>;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)
+        {
+            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;e[i].a,&amp;e[i].b,&amp;e[i].cost);
+        }
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=N;i++)
+            tree[i]=<span class="number">-1</span>;
+        sort(e+<span class="number">1</span>,e+m+<span class="number">1</span>);
+        <span class="keyword">int</span> sum=<span class="number">0</span>;
+        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)
+        {
+            <span class="keyword">int</span> aRoot=findRoot(e[i].a);
+            <span class="keyword">int</span> bRoot=findRoot(e[i].b);
+            <span class="keyword">if</span>(aRoot!=bRoot)
+            {
+                tree[aRoot]=bRoot;
+                sum+=e[i].cost;
+            }
+        }
+        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,sum);
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre>
