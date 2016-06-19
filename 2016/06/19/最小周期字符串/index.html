@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="括号匹配," />
+  <meta name="keywords" content="KMP,最小循环字符串," />
 
 
 
@@ -84,18 +84,18 @@
 
 
 
-<meta name="description">
+<meta name="description" content="&amp;#x63CF;&amp;#x8FF0;&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x957F;&amp;#x5EA6;&amp;#x4E3A;n&amp;#x7684;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;S&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x5B58;&amp;#x5728;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;T&amp;#xFF0C;&amp;#x91">
 <meta property="og:type" content="article">
-<meta property="og:title" content="括号匹配">
-<meta property="og:url" content="http://yoursite.com/2016/06/12/2016-06-10-括号匹配/index.html">
+<meta property="og:title" content="最小循环字符串">
+<meta property="og:url" content="http://yoursite.com/2016/06/19/最小周期字符串/index.html">
 <meta property="og:site_name" content="Reby">
-<meta property="og:description">
-<meta property="og:image" content="http://yoursite.com/2016/06/12/2016-06-10-括号匹配/logo.png">
-<meta property="og:updated_time" content="2016-06-14T04:31:11.024Z">
+<meta property="og:description" content="&amp;#x63CF;&amp;#x8FF0;&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x957F;&amp;#x5EA6;&amp;#x4E3A;n&amp;#x7684;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;S&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x5B58;&amp;#x5728;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;T&amp;#xFF0C;&amp;#x91">
+<meta property="og:image" content="http://yoursite.com/2016/06/19/最小周期字符串/最小循环字符串/1.jpg">
+<meta property="og:updated_time" content="2016-06-19T03:19:17.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="括号匹配">
-<meta name="twitter:description">
-<meta name="twitter:image" content="http://yoursite.com/2016/06/12/2016-06-10-括号匹配/logo.png">
+<meta name="twitter:title" content="最小循环字符串">
+<meta name="twitter:description" content="&amp;#x63CF;&amp;#x8FF0;&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x957F;&amp;#x5EA6;&amp;#x4E3A;n&amp;#x7684;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;S&amp;#xFF0C;&amp;#x5982;&amp;#x679C;&amp;#x5B58;&amp;#x5728;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;T&amp;#xFF0C;&amp;#x91">
+<meta name="twitter:image" content="http://yoursite.com/2016/06/19/最小周期字符串/最小循环字符串/1.jpg">
 
 
 
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/06/12/2016-06-10-括号匹配/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/19/最小周期字符串/"/>
 
-  <title> 括号匹配 | Reby </title>
+  <title> 最小循环字符串 | Reby </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -258,7 +258,7 @@
             
             
               
-                括号匹配
+                最小循环字符串
               
             
           </h1>
@@ -270,8 +270,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T21:48:39+08:00" content="2016-06-12">
-              2016-06-12
+            <time itemprop="dateCreated" datetime="2016-06-19T10:32:33+08:00" content="2016-06-19">
+              2016-06-19
             </time>
           </span>
 
@@ -300,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/12/2016-06-10-括号匹配/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/12/2016-06-10-括号匹配/" itemprop="commentsCount"></span>
+                <a href="/2016/06/19/最小周期字符串/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/19/最小周期字符串/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -324,8 +324,13 @@
       
 
       
-        <p><img src="/2016/06/12/2016-06-10-&#x62EC;&#x53F7;&#x5339;&#x914D;/logo.png" alt="logo"><br><a id="more"></a></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">IsLeft</span><span class="params">(<span class="keyword">char</span> a)</span></span><br><span class="line"></span>{</span><br><span class="line">  <span class="keyword">if</span>(a==<span class="string">&apos;(&apos;</span>||a==<span class="string">&apos;[&apos;</span>||a==<span class="string">&apos;{&apos;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">IsRight</span><span class="params">(<span class="keyword">char</span> b)</span></span><br><span class="line"></span>{</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="string">&apos;)&apos;</span>||b==<span class="string">&apos;]&apos;</span>||b==<span class="string">&apos;}&apos;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pMatch</span><span class="params">(<span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span><br><span class="line"></span>{</span><br><span class="line">  <span class="keyword">if</span>(a==<span class="string">&apos;(&apos;</span>&amp;&amp;b==<span class="string">&apos;)&apos;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="string">&apos;[&apos;</span>&amp;&amp;b==<span class="string">&apos;]&apos;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="string">&apos;{&apos;</span>&amp;&amp;b==<span class="string">&apos;}&apos;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">char</span>* str)</span></span><br><span class="line"></span>{</span><br><span class="line">  <span class="keyword">while</span>(*str)</span><br><span class="line">  {</span><br><span class="line">    <span class="keyword">if</span>(IsLeft(*str))</span><br><span class="line">    {</span><br><span class="line">      s.push(*str);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(IsRight(*str))</span><br><span class="line">    {</span><br><span class="line">      <span class="keyword">if</span>(s.empty()==<span class="literal">false</span>&amp;&amp;pMatch(s.top(),*str))</span><br><span class="line">      {</span><br><span class="line">        s.pop();</span><br><span class="line">      }</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">      {</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    str++;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">if</span>(s.empty()==<span class="literal">false</span>)</span><br><span class="line">  {</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>{</span><br><span class="line">  <span class="keyword">char</span> str[<span class="number">100</span>];</span><br><span class="line">  <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,str)!=EOF)</span><br><span class="line">  {</span><br><span class="line">        <span class="keyword">while</span>(s.empty()==<span class="literal">false</span>)</span><br><span class="line">            s.pop();</span><br><span class="line">    <span class="keyword">bool</span> bMatch=judge(str);</span><br><span class="line">    <span class="keyword">if</span>(bMatch)</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;Paren Match!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;Paren Unmatch!\n&quot;</span>);</span><br><span class="line">  }</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+        <h1 id="&#x63CF;&#x8FF0;"><a href="#&#x63CF;&#x8FF0;" class="headerlink" title="&#x63CF;&#x8FF0;"></a>&#x63CF;&#x8FF0;</h1><p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;n&#x7684;&#x5B57;&#x7B26;&#x4E32;S&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;T&#xFF0C;&#x91CD;&#x590D;&#x82E5;&#x5E72;&#x6B21;T&#x80FD;&#x591F;&#x5F97;&#x5230;S&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;S&#x53EB;&#x505A;&#x5468;&#x671F;&#x4E32;&#xFF0C;T&#x53EB;&#x505A;S&#x7684;&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x3002;<br>&#x5982;&#xFF1A;abababab&#x662F;&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x4E32;&#xFF0C;abab&#xFF0C;ab&#x90FD;&#x662F;&#x5B83;&#x7684;&#x5468;&#x671F;&#xFF0C;&#x5176;&#x4E2D;,ab&#x4E3A;&#x5B83;&#x7684;&#x6700;&#x5C0F;&#x7684;&#x5468;&#x671F;&#x4E32;&#x3002;</p>
+<h1 id="&#x4F7F;&#x7528;next&#xFF0C;&#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x89E3;&#x51B3;&#x95EE;&#x9898;"><a href="#&#x4F7F;&#x7528;next&#xFF0C;&#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x89E3;&#x51B3;&#x95EE;&#x9898;" class="headerlink" title="&#x4F7F;&#x7528;next&#xFF0C;&#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x89E3;&#x51B3;&#x95EE;&#x9898;"></a>&#x4F7F;&#x7528;next&#xFF0C;&#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x89E3;&#x51B3;&#x95EE;&#x9898;</h1><ul>
+<li>k=next[len],p=len-k;</li>
+<li>&#x82E5;len%p==0,&#x5219;p&#x4E3A;&#x6700;&#x5C0F;&#x5468;&#x671F;&#x957F;&#x5EA6;&#xFF0C;&#x524D;p&#x4E2A;&#x5B57;&#x7B26;&#x5C31;&#x662F;&#x6700;&#x5C0F;&#x5468;&#x671F;</li>
+<li>&#x82E5;len%p!=0,&#x5219;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x5B58;&#x5728;&#x5468;&#x671F;<br><img src="/2016/06/19/&#x6700;&#x5C0F;&#x5468;&#x671F;&#x5B57;&#x7B26;&#x4E32;/&#x6700;&#x5C0F;&#x5FAA;&#x73AF;&#x5B57;&#x7B26;&#x4E32;/1.jpg" alt="1"><br>&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;next&#x6570;&#x7EC4;&#x591A;&#x6C42;&#x4E86;&#x4E00;&#x4F4D;&#xFF0C;&#x5373;next[len]&#x4F4D;&#x3002;<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> next[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GetNext</span><span class="params">(<span class="keyword">char</span>* str)</span></span><br><span class="line"></span>{</span><br><span class="line">	next[<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">int</span> k=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> len=<span class="built_in">strlen</span>(str);</span><br><span class="line">	<span class="keyword">while</span>(j&lt;len)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span>(k==<span class="number">-1</span>||str[j]==str[k])</span><br><span class="line">		{</span><br><span class="line">			next[j+<span class="number">1</span>]=k+<span class="number">1</span>;</span><br><span class="line">			j++;</span><br><span class="line">			k++;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		{</span><br><span class="line">			k=next[k];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>{	</span><br><span class="line">	<span class="keyword">char</span> str[<span class="number">100</span>];</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,str)!=EOF)</span><br><span class="line">	{</span><br><span class="line">		GetNext(str);</span><br><span class="line">		<span class="keyword">int</span> len=<span class="built_in">strlen</span>(str);</span><br><span class="line">		<span class="keyword">int</span> p=len-next[len];</span><br><span class="line">		<span class="keyword">if</span>(p==len)</span><br><span class="line">		{</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;NULL\n&quot;</span>);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(len%p==<span class="number">0</span>)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;p;i++)</span><br><span class="line">			{</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,str[i]);</span><br><span class="line">			}</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		{</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;NULL\n&quot;</span>);</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -347,7 +352,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/括号匹配/" rel="tag">#括号匹配</a>
+            <a href="/tags/KMP/" rel="tag">#KMP</a>
+          
+            <a href="/tags/最小循环字符串/" rel="tag">#最小循环字符串</a>
           
         </div>
       
@@ -356,16 +363,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/12/2016-06-10-前缀/" rel="next" title="最短前缀">
-                <i class="fa fa-chevron-left"></i> 最短前缀
+              <a href="/2016/06/18/KMP/" rel="next" title="KMP">
+                <i class="fa fa-chevron-left"></i> KMP
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/06/14/2016-6-14-最长括号匹配/" rel="prev" title="最长括号匹配">
-                最长括号匹配 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/06/19/最小循环字符串/" rel="prev" title="最小周期字符串">
+                最小周期字符串 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -392,8 +399,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/12/2016-06-10-括号匹配/"
-           data-title="括号匹配" data-url="http://yoursite.com/2016/06/12/2016-06-10-括号匹配/">
+      <div class="ds-thread" data-thread-key="2016/06/19/最小周期字符串/"
+           data-title="最小循环字符串" data-url="http://yoursite.com/2016/06/19/最小周期字符串/">
       </div>
     
   </div>
@@ -484,7 +491,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#描述"><span class="nav-number">1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用next，线性时间解决问题"><span class="nav-number">2.</span> <span class="nav-text">使用next，线性时间解决问题</span></a></li></ol></div>
             
           </div>
         </section>
