@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="leetcode,tree," />
+  <meta name="keywords" content="贪心,leetcode," />
 
 
 
@@ -84,21 +84,19 @@
 
 
 
-<meta name="description" content="Given a binary tree, find its minimum depth.The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-&amp;#x6B64;&amp;#x65F6;&amp;#xFF0C;&amp;#x6811;&amp;#x7684;&amp;">
+<meta name="description" content="Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+For example, given the array [&amp;#x2212;2,1,&amp;#x2212;3,4,&amp;#x2212;1,2,1,&amp;#x2212;5,4],the contiguous">
 <meta property="og:type" content="article">
-<meta property="og:title" content="minimum-depth-of-binary-tree">
-<meta property="og:url" content="http://yoursite.com/2016/07/19/minmun_depth_of_binary_tree/index.html">
+<meta property="og:title" content="最大子序列和">
+<meta property="og:url" content="http://yoursite.com/2016/07/20/最大子序列和/index.html">
 <meta property="og:site_name" content="Reby">
-<meta property="og:description" content="Given a binary tree, find its minimum depth.The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-&amp;#x6B64;&amp;#x65F6;&amp;#xFF0C;&amp;#x6811;&amp;#x7684;&amp;">
-<meta property="og:image" content="http://yoursite.com/2016/07/19/minmun_depth_of_binary_tree/图片/tree1.png">
-<meta property="og:updated_time" content="2016-07-19T15:14:03.362Z">
+<meta property="og:description" content="Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+For example, given the array [&amp;#x2212;2,1,&amp;#x2212;3,4,&amp;#x2212;1,2,1,&amp;#x2212;5,4],the contiguous">
+<meta property="og:updated_time" content="2016-07-20T14:03:06.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="minimum-depth-of-binary-tree">
-<meta name="twitter:description" content="Given a binary tree, find its minimum depth.The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-&amp;#x6B64;&amp;#x65F6;&amp;#xFF0C;&amp;#x6811;&amp;#x7684;&amp;">
-<meta name="twitter:image" content="http://yoursite.com/2016/07/19/minmun_depth_of_binary_tree/图片/tree1.png">
+<meta name="twitter:title" content="最大子序列和">
+<meta name="twitter:description" content="Find the contiguous subarray within an array (containing at least one number) which has the largest sum.
+For example, given the array [&amp;#x2212;2,1,&amp;#x2212;3,4,&amp;#x2212;1,2,1,&amp;#x2212;5,4],the contiguous">
 
 
 
@@ -119,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/07/19/minmun_depth_of_binary_tree/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/20/最大子序列和/"/>
 
-  <title> minimum-depth-of-binary-tree | Reby </title>
+  <title> 最大子序列和 | Reby </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -261,7 +259,7 @@
             
             
               
-                minimum-depth-of-binary-tree
+                最大子序列和
               
             
           </h1>
@@ -273,8 +271,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-19T23:08:03+08:00" content="2016-07-19">
-              2016-07-19
+            <time itemprop="dateCreated" datetime="2016-07-20T21:51:30+08:00" content="2016-07-20">
+              2016-07-20
             </time>
           </span>
 
@@ -303,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/19/minmun_depth_of_binary_tree/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/19/minmun_depth_of_binary_tree/" itemprop="commentsCount"></span>
+                <a href="/2016/07/20/最大子序列和/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/20/最大子序列和/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -327,9 +325,11 @@
       
 
       
-        <p>Given a binary tree, find its minimum depth.The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
-<p><img src="/2016/07/19/minmun_depth_of_binary_tree/&#x56FE;&#x7247;/tree1.png" alt="1"><br>&#x6B64;&#x65F6;&#xFF0C;&#x6811;&#x7684;&#x6700;&#x77ED;&#x9AD8;&#x4E3A;2<br>&#x5F53;&#x6709;&#x4E00;&#x9897;&#x5B50;&#x6811;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x6700;&#x77ED;&#x9AD8;&#x4E3A;&#x53E6;&#x4E00;&#x9897;&#x9AD8;&#x5EA6;&#x52A0;1<br>&#x5F53;&#x5B50;&#x6811;&#x90FD;&#x4E0D;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x4E3A;left&#x548C;right&#x7684;&#x6700;&#x77ED;&#x9AD8;&#x52A0;1</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for binary tree</span><br><span class="line"> * public class TreeNode {</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode left;</span><br><span class="line"> *     TreeNode right;</span><br><span class="line"> *     TreeNode(int x) { val = x; }</span><br><span class="line"> * }</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">run</span><span class="params">(TreeNode root)</span> </span>{</span><br><span class="line">       <span class="keyword">if</span>(root==<span class="keyword">null</span>)</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">int</span> left=run(root.left);</span><br><span class="line">       <span class="keyword">int</span> right=run(root.right);</span><br><span class="line">       <span class="keyword">if</span>(left==<span class="number">0</span>) <span class="keyword">return</span> right+<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">if</span>(right==<span class="number">0</span>) <span class="keyword">return</span> left+<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">return</span> Math.min(left,right)+<span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+        <p>Find the contiguous subarray within an array (containing at least one number) which has the largest sum.</p>
+<p>For example, given the array [&#x2212;2,1,&#x2212;3,4,&#x2212;1,2,1,&#x2212;5,4],<br>the contiguous subarray [4,&#x2212;1,2,1] has the largest sum = 6.</p>
+<p>More practice:<br>If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.</p>
+<p>&#x6BCF;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;sum&#xFF0C;&#x6BD4;&#x8F83;&#x662F;&#x5426;&#x6BD4;ans&#x5927;&#x3002;<br>&#x5982;&#x679C;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x8D1F;&#x6570;&#xFF0C;&#x5176;&#x5B9E;&#x65E0;&#x6240;&#x8C13;&#xFF0C;&#x56E0;&#x4E3A;&#x867D;&#x7136;&#x4E4B;&#x524D;&#x7684;sum&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x52A0;&#x997F;&#x4E86;&#x8D1F;&#x6570;&#x540E;&#x53D8;&#x5C0F;&#x4E86;&#xFF0C;&#x4F46;&#x4E4B;&#x524D;&#x7684;sum&#x5DF2;&#x7ECF;&#x8BB0;&#x5F55;&#x5728;ans&#x4E2D;&#x4E86;&#xFF08;&#x8981;&#x662F;&#x6BD4;ans&#x5927;&#x7684;&#x8BDD;&#xFF09;<br>&#x5982;&#x679C;sum&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x8D1F;&#x6570;&#xFF0C;&#x5219;&#x91CD;&#x7F6E;sum=0&#xFF0C;&#x56E0;&#x4E3A;&#x52A0;&#x4E2A;&#x8D1F;&#x6570;&#x8BA1;&#x7B97;&#xFF0C;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x662F;&#x6700;&#x5927;&#x7684;&#x5E8F;&#x5217;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> ans=Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)</span><br><span class="line">        {</span><br><span class="line">            sum+=nums[i];</span><br><span class="line">            <span class="keyword">if</span>(sum&gt;ans)</span><br><span class="line">                ans=sum;</span><br><span class="line">            <span class="keyword">if</span>(sum&lt;<span class="number">0</span>)</span><br><span class="line">                sum=<span class="number">0</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -351,9 +351,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
+            <a href="/tags/贪心/" rel="tag">#贪心</a>
           
-            <a href="/tags/tree/" rel="tag">#tree</a>
+            <a href="/tags/leetcode/" rel="tag">#leetcode</a>
           
         </div>
       
@@ -362,17 +362,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/19/Eclipse常用快捷键/" rel="next" title="Eclipse常用快捷键">
-                <i class="fa fa-chevron-left"></i> Eclipse常用快捷键
+              <a href="/2016/07/19/minmun_depth_of_binary_tree/" rel="next" title="minimum-depth-of-binary-tree">
+                <i class="fa fa-chevron-left"></i> minimum-depth-of-binary-tree
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/20/最大子序列和/" rel="prev" title="最大子序列和">
-                最大子序列和 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -398,8 +394,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/19/minmun_depth_of_binary_tree/"
-           data-title="minimum-depth-of-binary-tree" data-url="http://yoursite.com/2016/07/19/minmun_depth_of_binary_tree/">
+      <div class="ds-thread" data-thread-key="2016/07/20/最大子序列和/"
+           data-title="最大子序列和" data-url="http://yoursite.com/2016/07/20/最大子序列和/">
       </div>
     
   </div>
